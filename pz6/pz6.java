@@ -11,7 +11,7 @@ public class pz6 {
                 А ещё эти формулы: CaCO3, Fe2O3, Fe(OH)3, (NH4)2SO4.
                 """;
 
-        Pattern pattern = Pattern.compile("[A-Z][A-Za-z0-9]+");
+        Pattern pattern = Pattern.compile("\\b([A-Z][a-z]?\\d*|(\\([^)]+\\))\\d*)+\\b");
         Matcher matcher = pattern.matcher(text);
 
         Set<String> formulas = new HashSet<>();
