@@ -6,7 +6,10 @@ import java.util.regex.Pattern;
 
 public class pz6 {
     public static void main(String[] args){
-        String text = "Даны формулы: H2O, C6H12O6, CO2, NH3, CH4, C2H6, H2SO4, NO2, HCl, CaCO3, Fe2O3";
+        String text = """
+                Даны формулы: H2O, C6H12O6, CO2, NH3, CH4, C2H6, H2SO4, NO2, HCl. 
+                А ещё эти формулы: CaCO3, Fe2O3, Fe(OH)3, (NH4)2SO4.
+                """;
 
         Pattern pattern = Pattern.compile("[A-Z][A-Za-z0-9]+");
         Matcher matcher = pattern.matcher(text);
